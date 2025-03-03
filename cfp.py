@@ -5,36 +5,36 @@ import pwnagotchi.plugins as plugins
 
 # Add new faces
 CUSTOM_FACES = {
-    'cool': '(⌐■_■)',
-    'happy': 'ʘ‿ʘ',
-    'angry': 'ಠ益ಠ',
-    'bored': '(－‸ლ)',
-    'excited': 'ヽ(°〇°)ﾉ',
-    'smart': '(｀・ω・´)',
-    'friend': '(ᵔᴥᵔ)',
-    'shocked': '(⊙_☉)',
-    'thinking': '(・・?)',
-    'sleepy': '(－ω－) zzZ',
-    'evil': 'ψ(｀∇´)ψ',
-    'confused': '(◎_◎;)',
-    'surprised': '(°ロ°) !',
-    'laughing': '(≧▽≦)',
-    'crying': '(╥﹏╥)',
-    'determined': '(ง •̀_•́)ง',
-    'sneaky': '(¬‿¬)',
-    'love': '(❤ω❤)',
-    'nerd': '(⌒▽⌒)☆',
-    'hero': '(ಠ_ಠ)━☆ﾟ.*･｡ﾟ',
-    'pirate': '(☠‿☠)',
+    'cool': '(^_^)',
+    'happy': '(^-^)',
+    'angry': '(>_<)',
+    'bored': '(-_-)',
+    'excited': '(o_O)',
+    'smart': '(=_=)',
+    'friend': '(^o^)',
+    'shocked': '(O_O)',
+    'thinking': '(-.-)',
+    'sleepy': '(-.-)Zzz',
+    'evil': '>:-)',
+    'confused': '(@_@)',
+    'surprised': '(O.O)',
+    'laughing': '(^o^)',
+    'crying': '(T_T)',
+    'determined': '(>_<)>',
+    'sneaky': '(-.-)',
+    'love': '(❤‿❤)',
+    'nerd': '(⌐■_■)',
+    'hero': '(ಠ_ಠ)',
+    'pirate': '(-_-)=b',
     'robot': '[¬º-°]¬',
-    'ghost': '(ړײ)',
-    'alien': '👽',
-    'ninja': '(ᗒᗣᗕ)՞',
-    'king': '♚',
-    'queen': '♛',
-    'joker': '🃏',
-    'zombie': '(☠◡☠)',
-    'monster': '༼ ༎ຶ ෴ ༎ຶ༽',
+    'ghost': '(o_o)',
+    'alien': '(👽)',
+    'ninja': '(ᗒᗣᗕ)',
+    'king': '(♚)',
+    'queen': '(♛)',
+    'joker': '(🃏)',
+    'zombie': '(☠)',
+    'monster': '(༎ຶ෴༎ຶ)',
 }
 
 # Add new phrases
@@ -124,12 +124,4 @@ class CFP(plugins.Plugin):
             logging.error(f"[cfp] Error in on_ui_update: {e}")
 
     def on_unload(self):
-        """Called when the plugin is unloaded."""
-        try:
-            logging.info("[cfp] Plugin unloaded")
-        except Exception as e:
-            logging.error(f"[cfp] Error in on_unload: {e}")
-
-def setup():
-    """Creates an instance of the plugin."""
-    return CFP()
+       
