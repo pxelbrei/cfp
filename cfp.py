@@ -1,7 +1,15 @@
 # Imports
 import logging
+import os
 import random
+import json
+
+import pwnagotchi
+import pwnagotchi.agent
 import pwnagotchi.plugins as plugins
+import pwnagotchi.ui.fonts as fonts
+from pwnagotchi.ui.components import LabeledValue
+from pwnagotchi.ui.view import BLACK
 
 # Add new faces
 CUSTOM_FACES = {
