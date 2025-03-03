@@ -1,15 +1,7 @@
 # Imports
 import logging
-import os
 import random
-import json
-
-import pwnagotchi
-import pwnagotchi.agent
 import pwnagotchi.plugins as plugins
-import pwnagotchi.ui.fonts as fonts
-from pwnagotchi.ui.components import LabeledValue
-from pwnagotchi.ui.view import BLACK
 
 # Add new faces
 CUSTOM_FACES = {
@@ -132,4 +124,12 @@ class CFP(plugins.Plugin):
             logging.error(f"[cfp] Error in on_ui_update: {e}")
 
     def on_unload(self):
-       
+        """Called when the plugin is unloaded."""
+        try:
+            logging.info("[cfp] Plugin unloaded")
+        except Exception as e:
+            logging.error(f"[cfp] Error in on_unload: {e}")
+
+def setup():
+    """Creates an instance of the plugin."""
+    return CFP()
