@@ -1,13 +1,3 @@
-# Credits
-__author__ = 'p.xelbrei'
-__version__ = '1.0.0'
-__license__ = 'GPL3'
-__description__ = (
-    'A plugin that adds custom faces and phrases. '
-    'Displays random faces and phrases based on configurable probabilities. '
-    'Perfect for giving your Pwnagotchi more personality!'
-)
-
 # Imports
 import logging
 import random
@@ -82,6 +72,16 @@ CUSTOM_PHRASES = [
 ]
 
 class CFP(plugins.Plugin):
+    # Credits
+    __author__ = 'p.xelbrei'
+    __version__ = '1.0.0'
+    __license__ = 'GPL3'
+    __description__ = (
+        'A plugin that adds custom faces and phrases. '
+        'Displays random faces and phrases based on configurable probabilities. '
+        'Perfect for giving your Pwnagotchi more personality!'
+    )
+
     def __init__(self):
         self.options = dict()
         self.running = False
