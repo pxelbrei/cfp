@@ -62,13 +62,12 @@ class CFP(plugins.Plugin):
     def on_ui_update(self, ui):
         """Displays random phrases based on configurable probabilities."""
         try:
-            logging.info("[cfp] on_ui_update called")
             # Show random phrases
             phrase_chance = int(self.options.get('phrase_chance', 10))  # Default: 10%
             if random.randint(0, 100) < phrase_chance:
                 random_phrase = random.choice(CUSTOM_PHRASES)
                 ui.set('status', random_phrase)
-                logging.info(f"[cfp] Displayed phrase: {random_phrase}")
+                logging.debug(f"[cfp] Displayed phrase: {random_phrase}")  # Changed to debug
         except Exception as e:
             logging.error(f"[cfp] Error in on_ui_update: {e}")
 
